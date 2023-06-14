@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* Fondo - Index*/
+.bg-index {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(194, 98, 11, 1) 44%, rgba(19, 18, 22, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+/* Fondo Modulos */
+.bg-modulos {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(208, 198, 190, 1) 44%, rgba(19, 18, 22, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+/* Fondos Slider */
+.bg-gears {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/slider/gears.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.bg-halo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/slider/halo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.bg-fifa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/slider/fifa24.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.bg-duty {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/slider/call.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+}
+
+h2 {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;;
+}
+
+p {
+    margin: 20px;
+    color: white;
+}
+
+.card-body p {
+    color: black;
+    margin-bottom: 5px;
+}
+
+footer p {
+    margin: 100px;
+    color: white;
+    text-align: center;
+}

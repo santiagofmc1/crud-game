@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras | Campus GameSoft</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" href="./assets/logo2.png">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="bg-modulos">
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <nav class="navbar navbar-dark border-bottom border-bottom-dark navbar-expand-md">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="./assets/logo2.png" alt="logo" class="logo">
+                        </a>
+                        <h1><a href="./index.html">Campus GameSoft</a></h1>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav gap-5">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./clientes.html">Clientes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./videojuegos.html">Videojuegos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./compras.html">Comprar Juegos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./puntos.html">Puntos - Fidelizacion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+
+        <h2 class="text-center mb-5 fs-1">Gestor de Compras</h2>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col col-md-8" id="form-juegos">
+                <!-- Buscar -->
+                <form action="" class="form-control">
+
+                    <h3 class="text-center mt-2 mb-4 fs-3">Datos de Compra</h3>
+
+                    <!-- Seleccion de clientes -->
+                    <div class="container-fluid" id="clientes">
+                        <!-- Buscar -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control fs-4" placeholder="Buscar cliente por documento..."
+                                id="buscar-clientes">
+                        </div>
+
+                        <!-- Tabla -->
+                        <div class="table-responsive">
+                            <table class="table table-dark table-striped text-center fs-4">
+                                <thead>
+                                    <tr>
+                                        <th>Documento</th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-clientes">
+                                    <tr>
+                                        <td>10142646969</td>
+                                        <td>Santiago</td>
+                                        <td>Mateus</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button class="btn btn-success disabled" type="button"
+                                id="select-cliente">Siguiente</button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Seleccion de Juego -->
+                    <div class="container-fluid d-none" id="juegos">
+                        <!-- Buscar -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Buscar por nombre juego..."
+                                id="buscar-juegos">
+                        </div>
+
+                        <!-- Tabla -->
+                        <div class="table-responsive ">
+                            <table class="table table-dark table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre de Juego</th>
+                                        <th>Valor Juego</th>
+                                        <th>Tematica</th>
+                                        <th>valorLicencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-juegos">
+                                    <tr>
+                                        <td>11111</td>
+                                        <td>11111</td>
+                                        <td>accion</td>
+                                        <td>111111</td>
+                                        <td>200</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button class="btn btn-success disabled" type="button" id="comprarJuego">Comprar
+                                Juego</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- Compra final -->
+            <div class="col col-md-8 mt-5 mb-5">
+                <div class="card d-flex flex-direction-column">
+                    <img class="align-self-center mt-4" src="./assets/logo2.png" alt="" width="100px">
+                    <h3 class="text-center">Campus GameSoft</h3>
+                    <h5 class="text-center">Detalle de Compra</h5>
+                    <hr class="me-3 ms-3">
+                    <h5 class="text-center">Datos Cliente</h5>
+                    <div class="card-body" id="clienteDatos">
+                        <p><b>Documento:</b> </p>
+                        <p><b>Nombres:</b> </p>
+                        <p><b>Teléfono:</b> </p>
+                        <p><b>Email:</b> </p>
+                        <p><b>Nacionalidad:</b> </p>
+                    </div>
+                    <hr class="me-3 ms-3">
+                    <h5 class="text-center">Costos</h5>
+                    <div class="card-body" id="juegoDatos">
+                        <p><b>Valor Juego:</b> </p>
+                        <p><b>+IVA:</b> </p>
+                        <p><b>+Impuesto Especial:</b> </p>
+                        <p><b>Total:</b> </p>
+                        <hr>
+                        <p><b>Puntos de Fidelización de Juego:</b> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+
+    <!-- JS -->
+    <script src="./js/compras.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

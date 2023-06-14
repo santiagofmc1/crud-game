@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | Campus GameSoft</title>
+    <!-- Bootstrap & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Favicon & CSS-->
+    <link rel="shortcut icon" href="./assets/faviconn.png" type="favicon-img">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-modulos">
+
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <nav class="navbar navbar-dark border-bottom border-bottom-dark navbar-expand-md">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="./assets/logo2.png" alt="logo" class="logo">
+                        </a>
+                        <h1><a href="./index.html">Campus GameSoft</a></h1>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav gap-5">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./clientes.html">Clientes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./videojuegos.html">Videojuegos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./compras.html">Comprar Juegos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./puntos.html">Puntos - Fidelizacion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+
+        <h2 class="text-center mb-5 fs-1">Gestor de Clientes</h2>
+
+        <section class="row">
+
+            <div class="row">
+                <div class="container col col-4"></div>
+
+                <!-- Formulario -->
+                <form action="" class="form-control col" id="form-anadir">
+                    <h5 class="text-center mt-2 fs-3" id="form-title">Datos del Cliente</h5>
+
+                    <input id="identificacion" type="number" class="form-control mt-4 fs-4 text-center" required
+                        placeholder="Ingrese su numero de Cedula">
+                    <input id="nombres" type="text" class="form-control mt-2 fs-4 text-center" required placeholder="Ingrese sus nombres">
+                    <input id="apellidos" type="text" class="form-control mt-2 fs-4 text-center" required placeholder="Ingrese sus apellidos">
+                    <input id="telefono" type="number" class="form-control mt-2 fs-4 text-center" required placeholder="Ingrese su numero de teléfono">
+                    <input id="email" type="email" class="form-control mt-2 fs-4 text-center" required placeholder="Ingrese su e-mail">
+                    <input id="fechaNacimiento" type="date" class="form-control mt-2 fs-4 text-center" required
+                        placeholder="Fecha de Nacimiento">
+                    <select class="form-select mt-2 fs-4 text-center" id="nacionalidad">
+                        <option selected>Seleccione su nacionalidad...</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Perú">Perú</option>
+                    </select>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button class="btn btn-success fs-4" type="submit" id="form-button">Añadir</button>
+                    </div>
+                </form>
+
+                <div class="container col col-md-4"></div>
+                <div class="container mt-5"></div>
+            </div>
+
+
+            <div class="col col-md-12">
+                <!-- Buscar cliente -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control fs-4" placeholder="Buscar cliente" id="buscar">
+                </div>
+
+                <!-- Tabla -->
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th>Nº Cedula</th>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Teléfono</th>
+                                <th>E-Mail</th>
+                                <th>Fecha - Nacimiento</th>
+                                <th>Nacionalidad</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-clientes">
+                            <tr>
+                                <td>1014264696</td>
+                                <td>Santiago</td>
+                                <td>Mateus</td>
+                                <td>3192445590</td>
+                                <td>santiagofmc@hotmail.com</td>
+                                <td>04/11/1995</td>
+                                <td>Colombia</td>
+                                <td class="">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <button class="btn btn-primary me-1">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- JS -->
+    <script src="./js/clientes.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
